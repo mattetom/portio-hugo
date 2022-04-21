@@ -123,8 +123,11 @@
           <h3>Contact Form</h3>
         </div>
         <div class="contact-form-input">
+          {{ with .Site.Params.useNetlifyForm }}
+          <form id="contact-form" netlify method="POST">
+          {{ else }} 
           <form id="contact-form" action="{{ .Site.Params.formspreeURL }}" method="POST">
-
+          {{end}} 
             <div class="form-row">
 
               <div class="form-group col-md-6 pr-3">

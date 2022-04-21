@@ -124,7 +124,7 @@
         </div>
         <div class="contact-form-input">
           {{ with .Site.Params.useNetlifyForm }}
-          <form id="contact-form" netlify method="POST">
+          <form id="contact" netlify method="POST">
           {{ else }} 
           <form id="contact-form" action="{{ .Site.Params.formspreeURL }}" method="POST">
           {{end}} 
